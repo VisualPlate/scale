@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="toolbar">
+        <input type="file" id="imageInput" accept="image/*">
+
+        <div class="tool-group">
+            <button id="drawCalibrationMeasurements" title="Set a known real-world length to calibrate scale">
+                <span class="glyph" aria-hidden="true"></span>Calibrate
+            </button>
+            <button id="drawScale" title="Draw a line to measure">
+                <span class="glyph" aria-hidden="true"></span>Measure line
+            </button>
+            <button id="drawSquare" title="Draw a rectangle to measure area">
+                <span class="glyph" aria-hidden="true"></span>Measure area
+            </button>
+        </div>
+
+        <button id="downloadCombined" title="Download the sheet with markup">Download</button>
+        <button id="clearCanvas" title="Remove all markup from the sheet">Clear</button>
+    </div>
+
+    <div class="canvas-frame">
+        <div class="ruler ruler-corner" aria-hidden="true"></div>
+        <div class="ruler ruler-top" aria-hidden="true"></div>
+        <div class="ruler ruler-left" aria-hidden="true"></div>
+
+        <div class="canvas-wrap" id="canvasWrap">
+            <span class="reg-mark tl" aria-hidden="true"></span>
+            <span class="reg-mark tr" aria-hidden="true"></span>
+            <span class="reg-mark bl" aria-hidden="true"></span>
+            <span class="reg-mark br" aria-hidden="true"></span>
+            <span class="sheet-id" aria-hidden="true">01</span>
+
+            <canvas id="canvas" width="1000" height="600"></canvas>
+            <canvas id="overlayCanvas" width="1000" height="600"></canvas>
+        </div>
+    </div>
+
+    <div class="legend">
+        <span><i class="swatch" style="background:var(--calibration); color:var(--calibration)"></i> Calibration line</span>
+        <span><i class="swatch" style="background:var(--measured); color:var(--measured)"></i> Measured line</span>
+        <span><i class="swatch" style="background:var(--square); color:var(--square)"></i> Measured area</span>
+    </div>
+
+    <div class="readout">
+        <p><span class="label">Line length</span><span id="lineLength">--</span></p>
+        <p><span class="label">Real length</span><span id="realLength">--</span></p>
+        <p><span class="label">mm / pixel</span><span id="mmPerPixel">--</span></p>
+        <p><span class="label">Measurement</span><span id="linelenghtInMM">--</span></p>
+        <p><span class="label">Area</span><span id="squareDimensions">--</span></p>
+    </div>
+
+    <script src="assets/js/import.js"></script>
+    <script src="assets/js/clear.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/download.js"></script>
+</body>
+
+</html>

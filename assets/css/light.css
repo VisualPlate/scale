@@ -1,0 +1,33 @@
+:root {
+    /* ─────────────────────────────
+       MODERN WHITE PALETTE
+       ───────────────────────────── */
+
+    --bg: #FEFEFE;
+    --surface: #ffffff;
+    --surface-2: #f4f5f6;
+    --surface-3: #eceef0;
+
+    --line: #e1e3e6;
+    --line-bright: #cfd2d6;
+
+    --text: #17191c;
+    --muted: #6b7078;
+    --dim: #9a9fa6;
+
+    --accent: #17191c;
+    --accent-soft: rgba(0, 0, 0, 0.05);
+    --accent-glow: rgba(0, 0, 0, 0.10);
+
+    /* Pen colours, matched 1:1 to the legend */
+    --calibration: #ff6a5c;
+    --measured: #5b9dff;
+    --square: #35dba0;
+
+    --danger: #e5483f;
+    --success: #20b77d;
+
+    --canvas-bg: #f2f3f5;
+
+    --radius: 8px;
+}

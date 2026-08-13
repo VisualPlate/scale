@@ -1,0 +1,34 @@
+:root {
+    /* ─────────────────────────────
+       NEUTRAL PALETTE
+       ───────────────────────────── */
+
+    --bg: #111111;
+    --surface: #181818;
+    --surface-2: #202020;
+    --surface-3: #292929;
+
+    --line: #333333;
+    --line-bright: #444444;
+
+    --text: #eeeeee;
+    --muted: #999999;
+    --dim: #666666;
+
+    --accent: #ffffff;
+    --accent-soft: rgba(255, 255, 255, 0.08);
+    --accent-glow: rgba(255, 255, 255, 0.16);
+
+    
+    /* Pen colours, matched 1:1 to the legend */
+    --calibration: #ff6a5c;
+    --measured: #5b9dff;
+    --square: #35dba0;
+
+    --danger: #ff6a5c;
+    --success: #35dba0;
+
+    --canvas-bg: #f2f2f2;
+
+    --radius: 6px;
+}
